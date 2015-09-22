@@ -1,0 +1,49 @@
+<template name="form">
+	<div id="form" class="content">
+		<div class="center">
+		    <form class="new-event">
+		    	<h1>Enter Event</h1>
+		    	<fieldset id="basic">
+		    		<legend>Basic Information</legend>
+					<label for="name"> Name:</label> 
+						<input autofocus name="name" placeholder="Event Name" type="text" maxlength="200" required> <br>
+					<label for="start"> Start Date/Time:</label>
+						<input name="start" type="datetime-local" required> <br>
+					<label for="end"> End Date/Time:</label>
+						<input name="end" type="datetime-local" required> <br>
+	                <label for="location"> Location:</label>
+                		<input name="location" placeholder="Event Location" type="text" maxlength="200" required> <br>
+	            	<label for="link"> Link (Optional):</label>
+            			<input name="link" placeholder="Event URL" type="url"> <br>
+    			</fieldset>
+
+                <fieldset id="description"> 
+                    <legend> Event Description </legend>
+                    <textarea name="descriptionform" rows="5" placeholder="Please write a little bit about your event." maxlength="2000" required></textarea>
+                </fieldset>
+                
+                <fieldset id="checklist">
+                    <legend> Please check all that apply:</legend>
+                    <table id="checkoptions">
+	                    <tr>
+		                    <td> <input type="checkbox" id="food" checked="{{foodChecked}}"> Food </td>
+		                    <td> <input type="checkbox" id="music" checked="{{musicChecked}}"> Music </td>
+		                    <td> <input type="checkbox" id="arts" checked="{{artsChecked}}"> Arts & Crafts </td>
+	                    </tr>
+	                    <tr>
+		                    <td> <input type="checkbox" id="hiring" checked="{{hiringChecked}}"> Hiring </td>
+		                    <td> <input type="checkbox" id="info" checked="{{infoChecked}}"> Information </td>
+		                    <td> <input type="checkbox" id="people" checked="{{peopleChecked}}"> Famous People </td>
+	                    </tr>
+	                    <tr>
+		                    <td> <input type="checkbox" id="social" checked="{{socialChecked}}"> Social </td>
+		                    <td> <input type="checkbox" id="sport" checked="{{sportsChecked}}"> Sports </td>
+		                    <td> <input type="checkbox" id="other" checked="{{otherChecked}}"> Other </td>
+	                    </tr>
+                    </table>
+                </fieldset>
+                <input id="submitbutton" type="submit" name="submit">
+            </form>
+        </div>
+	</div>
+</template>

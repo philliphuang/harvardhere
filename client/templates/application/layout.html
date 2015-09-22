@@ -1,0 +1,38 @@
+<template name="layout">
+	<div id="wrapper">
+	    <div id="topbar">
+	    	{{> topbar}}
+	    </div>
+		<div id="navbar">
+	    	<a id="yourEvents" class="navbutton{{#with eventselect}} navselect{{/with}}" href="{{pathFor 'content'}}">Events by Date</a>
+	    	<div id="filters">
+	    		<form id="filterForm">
+	    			<a href="{{pathFor 'content'}}"> <div id="allfilter" class="filterbutton"> All </div> </a>
+					<a href="{{pathFor 'food'}}"> <div id="food" class="filterbutton">Food</div> </a>
+					<a href="{{pathFor 'music'}}"> <div id="music" class="filterbutton"> Music </div> </a>
+					<a href="{{pathFor 'arts'}}"> <div id="arts" class="filterbutton"> Arts & Crafts </div> </a>
+					<a href="{{pathFor 'hiring'}}"> <div id="hiring" class="filterbutton"> Hiring </div> </a> 
+					<a href="{{pathFor 'info'}}"> <div id="info" class="filterbutton"> Information </div> </a> 
+					<a href="{{pathFor 'people'}}"> <div id="people" class="filterbutton"> People </div> </a> 
+					<a href="{{pathFor 'social'}}"> <div id="social" class="filterbutton">Social </div> </a> 
+					<a href="{{pathFor 'sports'}}"> <div  id="sports" class="filterbutton"> Sports </div> </a> 
+					<a href="{{pathFor 'other'}}"> <div id="other" class="filterbutton"> Other </div> </a>
+				</form>
+			</div>
+			<a id="Favorites" class="navbutton navfix" href="{{pathFor 'favorites'}}">Most Popular</a>
+		    {{#if currentUser}}
+			    <a id="myEvents" class="navbutton" href="{{pathFor 'myevents'}}">My Events</a>
+			    <a id="addPublicEvent" class="navbutton navfix" href="{{pathFor 'form'}}">Add Event</a>
+		    {{/if}}
+		    <a id="searchbutton" class="navbutton" href="{{pathFor 'search'}}">Search</a>
+		    <a id="about" class="navbutton navfix" href="{{pathFor 'about'}}">About/Contact</a>
+		</div>
+    <div id="container">
+			{{> yield}}
+		</div>
+		<div id="masthead">
+      - By Phillip Huang, Scott Sun, <span id="easteregg">&</span> Nakoa Farrant -
+		</div>
+	</div>
+
+</template>

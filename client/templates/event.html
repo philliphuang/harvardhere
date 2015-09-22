@@ -1,0 +1,41 @@
+<template name="event">
+	<div class="center eventcenter">
+		<div class="eventtop">
+			<div class="eventname">{{name}}</div>
+			<div class="timeuntil">
+				<span class="highlight">{{timeuntil}}</span>
+			</div>
+			<div class="eventlocation">
+				at <span class="highlight">{{location}}</span>
+			</div>
+			<br>
+			<div class="eventdatetime">
+				From 
+				<span class="highlight">{{start}}</span> 
+				to
+				<span class="highlight">{{end}}</span>
+			</div>
+			<div class="upvote">
+				{{#if currentUser}}
+				<a href="#" class="btn btn-default {{upvotedClass}}">
+					♥
+				</a> 
+				{{else}}
+				<span class="upvotable">♥</span>
+				{{/if}}
+				<span class="upcount">{{votes}}</span>
+			</div>
+		</div>
+		<div class="eventbot" style="display:none">
+			{{#if currentUser}}
+				<div class="eventcreator">
+					Created by: <a href="mailto:{{email}}">{{email}}</a>
+				</div>
+			{{/if}}
+			<div class="eventlink">
+				<a href="{{link}}">{{link}}</a> 
+			</div>
+			<div class="eventdescription">{{description}}</div>
+		</div>
+	</div>
+</template>

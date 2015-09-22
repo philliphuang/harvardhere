@@ -1,0 +1,575 @@
+@media (min-width: 900px) {
+  
+  /* GENERAL STYLING */
+  * {
+      margin: 0;
+      padding: 0;
+  }
+
+  html {
+    height: 100%;
+  }
+
+  @font-face {
+      font-family: "raleway";
+      src: url("fonts/Raleway/Raleway-Regular.ttf");
+  }
+
+  body {
+    height: 100%;
+    background-image: url("img/small_campus.jpg");
+      background-attachment: fixed;
+      background-size: cover;
+      background-repeat: no-repeat;
+    font-family: 'raleway', sans-serif;
+    color: black;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
+  a:hover {
+      text-decoration: underline;
+  }
+
+  #container {
+      margin: 0.5em;
+      margin-top: 0em;
+      margin-left: 14em;
+      margin-right: 14em;
+      padding-top: 3em;
+      padding-bottom: 3em;
+      text-align: center;
+  }
+
+  /* TOPBAR */
+
+  #topbar {
+      background-color: rgba(164,16,52,1);
+      box-shadow: 0em 0em 3em rgba(0,0,0,1);
+      position: fixed;
+      width: 100%;
+      top:0;
+      left:0;
+      z-index: 1;
+      text-align: center;
+  }
+
+  #signin {
+      position: absolute;
+      display: table-cell;
+      padding: 1em;
+      max-height: 3em;
+      color: white;
+      padding-right: 15em;
+  }
+
+  #signin a{
+      color: white;
+      text-decoration: none;
+      text-align: right;
+  }
+
+  #login-dropdown-list {
+      background-color: rgba(100,100,100,1);
+      color: white;
+  }
+
+  #login-dropdown-list input {
+      color: black;
+  }
+
+  #logo {
+      font-size: 2.5em;
+      color: white;
+      font-family: 'raleway';
+      padding-top: 0.1em;
+      text-shadow: 0em 0.05em #808080;
+      min-width: 10em;
+      text-decoration: none;
+      display: inline;
+  }
+
+  #logo:hover {
+      text-decoration: none;
+      text-shadow: 0em 0em 1em white;
+  }
+
+  #searchbar input {
+      margin-top: 2em;
+      margin-bottom: 2em;
+      padding: 1em;
+      box-shadow: 0em 0em 1em black;
+      background-color: white;
+      border-radius: 2em;
+  }
+
+  /* NAVBAR */
+
+  #navbar {
+      padding-top: 3em;
+    width: 12em;
+      position: fixed;
+      margin-left: 1em;
+      font-weight: bold;
+  }
+
+  .navbutton {
+      -webkit-transition: margin-left 0.2s;
+      transition: margin-left 0.2s;
+      box-shadow: 0em 0em 0.5em rgba(0,0,0,1);
+      border-right: 0.5em solid rgba(100,100,100,1);
+      width: 100%;
+      display: block;
+      padding: 0.5em;
+      margin-top: 1em;
+      margin-bottom: 0em;
+      background-color: rgba(255,255,255,1);
+      box-sizing: border-box;
+      color: black;
+  }
+
+  .navbutton:hover {
+      margin-left: 0.5em;
+      box-shadow: 0em 0em 0.5em rgba(164,16,52,1);
+      border-right: 0.5em solid rgba(164,16,52,1);
+  }
+
+  .navselect {
+      box-shadow: 0em 0em 0.5em rgba(0,0,0,1);
+      border-right: 0.5em solid rgba(164,16,52,1);
+  }
+
+  #navbar a:hover {
+      text-decoration: none;
+  }
+
+  #yourEvents {
+      margin-bottom: 0em;
+  }
+
+  #filters {
+      padding: 0em;
+      padding-top: 1em;
+      padding-bottom: 1em;
+      margin-left: 0.5em;
+      margin-right: 0.5em;
+      background-color: rgba(0,0,0,0.5);
+      color: white;
+      width: 11em;
+      border-radius: 0em 0em 1em 1em;
+      display: none;
+  }
+
+  .filterbutton{
+      padding-left: 1em;
+      padding-right: 1em;
+      padding-top: 0.1em;
+      padding-bottom: 0.1em;
+  }
+
+  .filterbutton:hover {
+      background: white;
+      color: black;
+  }
+
+  .filterselect {
+      background: white;
+      color: black;
+  }
+
+  /* CONTENT */
+  .content {
+      padding-top: 1em;
+  }
+
+  .center * {
+      padding: 0.5em;
+      box-sizing: border-box;
+  }
+
+  .center {
+      padding: 3em;
+      padding-left: 5em;
+      padding-right: 5em;
+      margin-left: auto;
+      margin-right: auto;
+      width: 40em; 
+      background-color: rgba(0,0,0,0.5);
+      border-radius: 1em;
+  }
+
+  .center h1{
+      text-align: center;
+  }
+
+  /* MASTHEAD */
+  /* http://www.cssreset.com/how-to-keep-footer-at-bottom-of-page-with-css/ */
+  #wrapper {
+      min-height:100%;
+      position:relative;
+  }
+
+  #masthead {
+      width: 100%;
+      height: 1.5em;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      font-size: 75%;
+      color: white;
+      background-color: rgba(164,16,52,1);
+      box-shadow: 0em 0em 3em rgba(0,0,0,1);
+      text-align: center;
+      padding-top: 0.25em;
+      z-index: 1;
+      text-shadow: 0em 0.05em #808080;
+  }
+
+  /* FORM TWEAKING */
+
+  #form {
+      width: 100%;
+  }
+
+  form > h1 {
+      color: white;
+      text-align: left;
+  }
+
+  input {
+      border-radius: 0.5em;
+      border: white;
+      box-shadow: inset 0em 0em 0.5em #808080;
+  }
+
+  fieldset {
+      background: rgba(255,255,255,1);
+      border-radius: 0.5em;
+      text-align: left;
+  }
+
+  textarea {
+      border: none;
+      width: 100%;
+  }
+
+  legend {
+      border-radius: 1em;
+      background: white;
+      box-shadow: 0em 0em 0.5em black;
+      text-align: center;
+  }
+
+  .center fieldset {
+      margin-bottom: 1em;
+  } 
+
+  #submitbutton {
+      width: 10em;
+  }
+
+  .popup label, .popup input, #basic label, #basic input, #basic select {
+      display: block;
+      width: 30em;
+      float: right;
+      margin-bottom: 0.5em;
+      height: 2.5em;
+  }
+
+  .popup label, #basic label {
+      text-align: right;
+      padding-right: 0.5em;
+      float: left;
+      width: 10em;
+  }
+
+  #basic br {
+      clear: left;
+  }
+
+  #checklist td {
+      width: 33%;
+  }
+
+  #checklist input {
+      width: auto;
+  }
+
+  .hide {
+      padding: 0;
+  }
+
+  /* EVENT DISPLAY TWEAKING */
+  #events li {
+      list-style-type: none;
+  }
+
+  .eventcenter {
+      padding: 0.5em;
+      padding-top: 0em;
+      padding-bottom: 1em;
+      margin-bottom: 0em;
+      background-color: rgba(0,0,0,0);
+      box-shadow: none;
+      display: inline-block;
+      text-align: left;
+      vertical-align: top;
+  }
+
+  .eventcenter div {
+      padding: 0;
+      word-wrap: break-word;
+  }
+
+  .eventcenter > div {
+      padding: 1em;
+      display: block;
+      clear: both;
+  }
+
+  .eventtop {
+      padding: 1em;
+      margin: 0;
+      background-color: #f0f0f0;
+      box-shadow: 0em 0.2em 0.2em black;
+      word-wrap: break-word;
+      -webkit-transition: box-shadow 0.2s, background-color: 0.2s;
+      transition: box-shadow 0.2s, background-color: 0.2s;
+  }
+  
+  .eventtop:hover {
+      background-color: #ffffff;
+      box-shadow: 0em 0.3em 0.7em black;
+  }
+
+  .eventtop div {
+      display: inline-block;
+      max-width: 38em;
+  }
+
+  .eventbot {
+      padding: 1em;
+      margin-left: 1em;
+      margin-right: 1em;
+      background-color: rgba(0,0,0,0.5);
+      color: white;
+      width: 38em;
+      border-radius: 0em 0em 1em 1em;
+      display: none;
+      word-wrap: break-word;
+  }
+
+  .eventbot a{
+      color: white;
+  }
+
+  .eventname {
+      width: 100%;
+      font-size: 1.5em;
+      font-family: 'raleway';
+      text-transform: uppercase;
+  }
+
+  .upbutton {
+      height: 1em;
+  }
+
+  .eventdatetime {
+      width: 85%;
+  }
+
+  .upvote {
+      padding: 0;
+      color: #808080;
+      text-align: right;
+      width: 14%;
+  }
+
+  .upvote a:hover{
+      text-decoration: none;
+  }
+
+  .upvote *{
+      padding: 0;
+      color: black;
+  }
+
+  .upvotable {
+      opacity: 0.3;
+      font-size: 2em;
+  }
+
+  .upvotable:hover {
+      opacity: 1;
+  }
+
+  .disabled {
+      height: 1em;
+      width: 1em;
+      border-radius: 0.1em;
+      opacity: 1;
+      font-size: 2em;
+  }
+
+  .upcount {
+      font-size: 1.5em;
+  }
+
+  .highlight {
+      font-weight: bold;
+      padding: 0;
+  }
+
+  .eventlocation, .timeuntil {
+      margin-top: 0.5em;
+  }
+
+  .eventcreator {
+      margin-bottom: 1em;
+  }
+
+  .eventlink {
+      font-family: monospace;
+  }
+
+  .eventlink a{
+      padding: 0em;
+  }
+
+  .eventdescription {
+      font-size: 75%;
+      margin-top: 1em;
+  }
+
+  #load-more {
+      display: block;
+      width: 10em;
+      height: 2em;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 2em;
+      border: 0.1em solid black;
+      color: black;
+      background: white;
+      text-align: center;
+      padding-top: 1em;
+      box-shadow: 0em 0em 1em black;
+      border-radius: 1em;
+  }
+
+  /* MY EVENTS TWEAKING */
+  .myvotes {
+      margin-top: 0.5em;
+      box-shadow: 0em 0em 0.5em black;
+      border-radius: 0.5em;
+  }
+
+  .myevent * {
+      display: inline-block;
+      vertical-align: top;
+  }
+
+  .myeventname {
+      width: 32em;
+      margin-left: 0.25em;
+      margin-right: 0.25em;
+      margin-top: 0.5em;
+  }
+
+  .myeventbutton {
+      width: 2em;
+      height: 2em;
+      padding: 0em;
+  }
+
+  .myeventbutton * {
+      padding: 0em;
+  }
+
+  .myeventimg {
+      height: 100%;
+      width: 100%;
+      opacity: 0.5;
+  }
+
+  .myeventimg:hover {
+      opacity: 1;
+  }
+
+  /* ABOUT PAGE TWEAKING */
+  #aboutpage {
+      text-align: left;
+      color: white;
+      line-height: 2;
+  }
+
+  #aboutpage a{
+      color: white;
+      text-decoration: underline;
+  }
+
+  #aboutpage table {
+      width: 100%;
+  }
+
+  #aboutpage td {
+      width: 33%;
+  }
+
+  .aboutpic {
+      height: 10em;
+      width: 10em;
+      border-radius: 5em;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      box-shadow: 0em 0em 1em black;
+      padding: 0em;
+  }
+
+  .aboutlabel {
+      text-align: center;
+      font-weight: bold;
+      font-family: 'raleway';
+  }
+
+  #abouttext *{
+      padding: 0em;
+  }
+
+  #aboutpage hr{
+      margin-top: 1em;
+      margin-bottom: 1em;
+      color: white;
+  }
+
+  .aboutsmall {
+      margin-top: 1em;
+      font-size: 0.75em;
+      text-align: center;
+  }
+
+  #tips {
+      margin-top: 1em;
+      margin-bottom: 1em;
+      padding: 2em;
+      box-shadow: 0em 0em 1em black;
+      background-color: white;
+      color: black;
+      border-radius: 0.5em;
+  }
+
+  #tipslist {
+      list-style-position: inside;
+  }
+
+  /* ACCESS DENIED TWEAKING */
+
+  .message {
+      color: white;
+  }
+  
+}

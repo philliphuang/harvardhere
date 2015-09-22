@@ -1,0 +1,7 @@
+<template name="searchBox">
+	<div id="searchbar">{{> esInput index="events" placeholder="Search All Events..." }}</div>
+
+	{{#esEach index="events"}}
+		{{> event}}
+	{{/esEach}}
+</template>

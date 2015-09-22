@@ -1,0 +1,16 @@
+<template name="hiring">
+	<div id="events" class="content">
+		<!--{{> searchBox}}-->
+		{{#each hirings}}
+        	{{> event}}
+        {{/each}}
+
+        {{#if nextPath}}
+	      <a id="load-more" href="{{nextPath}}">Load more</a>
+	    {{else}}
+		    {{#unless ready}}
+		    	{{> spinner}}
+		    {{/unless}}
+		{{/if}}
+	</div>
+</template>

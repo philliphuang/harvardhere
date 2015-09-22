@@ -1,0 +1,17 @@
+<template name="myevents">
+	<div id="events" class="content">
+		<ul>
+			{{#each myevents}}
+	        	{{> myevent}}
+	        {{/each}}
+    	</ul>
+
+        {{#if nextPath}}
+	      <a id="load-more" href="{{nextPath}}">Load more</a>
+	    {{else}}
+		    {{#unless ready}}
+		    	{{> spinner}}
+		    {{/unless}}
+		{{/if}}
+	</div>
+</template>
